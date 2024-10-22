@@ -1,115 +1,82 @@
-<p align="center">
-	<img width="300" src="static/frontend/calcus.png">
+<div class="Box-sc-g0xbh4-0 QkQOb js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><p align="center" dir="auto">
+	<a target="_blank" rel="noopener noreferrer" href="/cyllab/CalcUS/blob/master/static/frontend/calcus.png"><img width="300" src="/cyllab/CalcUS/raw/master/static/frontend/calcus.png" style="max-width: 100%;"></a>
 </p>
-
-# CalcUS - Quantum Chemistry Web Platform
-CalcUS brings all the necessary tools to perform quantum chemistry in a user-friendly web interface. It strives for simplicity, clarity and efficiency.
-
-This project is developed by the Legault group at the Université de Sherbrooke (Sherbrooke, Canada).
-
-Documentation and an overview of the platform are available on [ReadTheDocs](https://calcus.readthedocs.io/).
-
-<p align="center">
-	<img width="600" src="https://calcus.readthedocs.io/en/latest/_images/new_molecule_overview.png">
+<div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto" _msttexthash="48822449" _msthash="341">CalcUS - 量子化学网络平台</h1><a id="user-content-calcus---quantum-chemistry-web-platform" class="anchor" aria-label="永久链接： CalcUS - Quantum Chemistry Web Platform" href="#calcus---quantum-chemistry-web-platform" _mstaria-label="1657630" _msthash="342"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto" _msttexthash="422219018" _msthash="343">CalcUS 在用户友好的 Web 界面中提供了执行量子化学所需的所有工具。它力求简单、清晰和高效。</p>
+<p dir="auto" _msttexthash="262552498" _msthash="344">该项目由 Université de Sherbrooke（加拿大舍布鲁克）的 Legault 小组开发。</p>
+<p dir="auto" _msttexthash="86764392" _msthash="345"><a href="https://calcus.readthedocs.io/" rel="nofollow" _istranslated="1">ReadTheDocs</a> 上提供了文档和平台概述。</p>
+<p align="center" dir="auto">
+	<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/7f3a7f02cee9def0eac942436d746772471847dccbcfa0459a9d437a538fe5e8/68747470733a2f2f63616c6375732e72656164746865646f63732e696f2f656e2f6c61746573742f5f696d616765732f6e65775f6d6f6c6563756c655f6f766572766965772e706e67"><img width="600" src="https://camo.githubusercontent.com/7f3a7f02cee9def0eac942436d746772471847dccbcfa0459a9d437a538fe5e8/68747470733a2f2f63616c6375732e72656164746865646f63732e696f2f656e2f6c61746573742f5f696d616765732f6e65775f6d6f6c6563756c655f6f766572766965772e706e67" data-canonical-src="https://calcus.readthedocs.io/en/latest/_images/new_molecule_overview.png" style="max-width: 100%;"></a>
 </p>
-
-## Updating from Version 1.2.1
-Due to major changes in the underlying code, **it is not possible to migrate the database to CalcUS version 2**. A new Docker repository has been created from the images of version 2 and thus you must update your local code (either with `git pull` or by redownloading this repository) in order to start using CalcUS version 2. Otherwise, you will keep using version 1.2.1, which will not be updated further.
-
-## CalcUS Cloud
-We are developing a cloud service to give you access to CalcUS without any configuration. This service, [CalcUS Cloud](https://calcus.cloud), will be aimed mostly at professors which want to teach practical quantum chemistry. Entire classes will be able to follow an online curriculum and run real, lightning-fast xTB calculations. This service is currently in the alpha stage. If you would like to have early access to the platform, email us at `contact@calcus.cloud`.
-
-## Installation
-
-For licensing reasons, **no software package requiring a user license can be included with CalcUS.** For convenience, we have included the LGPL-v3 licensed [xtb software package](https://github.com/grimme-lab/xtb) as well as related packages by the Grimme group ([crest](https://github.com/grimme-lab/crest), [stda](https://github.com/grimme-lab/stda) and [xtb4stda](https://github.com/grimme-lab/xtb4stda)). These enable fast semi-empirical tight-binding calculations in CalcUS by default. 
-
-CalcUS also contains a redistribution of the open-source wavefunction analysis program [Multiwfn](http://sobereva.com/multiwfn/) along with its license. If you use molecular orbitals from CalcUS, please also cite Multiwfn: Tian Lu, Feiwu Chen, "Multiwfn: A Multifunctional Wavefunction Analyzer", *J. Comput. Chem.*, **2012**, *33*, 580-592. DOI: [10.1002/jcc.22885](https://doi.org/10.1002/jcc.22885)
-
-In order to use other software packages, you will need either to install the Linux version of a package locally or use the packages on remote clusters. 
-
-### Linux and Mac
-Firstly, install and configure [Docker Engine](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/). On Linux, it is necessary to create a docker group and to add yourself to it:
-
-<pre>
-sudo groupadd docker
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto" _msttexthash="18560178" _msthash="346">从版本 1.2.1 更新</h2><a id="user-content-updating-from-version-121" class="anchor" aria-label="永久链接： 从 1.2.1 版本更新" href="#updating-from-version-121" _mstaria-label="946972" _msthash="347"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font _mstmutation="1" _msttexthash="2344855656" _msthash="348">由于底层代码的重大更改，<strong _mstmutation="1" _istranslated="1">无法将数据库迁移到 CalcUS 版本 2</strong>。已从版本 2 的映像创建新的 Docker 存储库，因此您必须更新本地代码（使用或重新下载此存储库）才能开始使用 CalcUS 版本 2。否则，您将继续使用 1.2.1 版本，该版本不会进一步更新。</font><code>git pull</code></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto" _msttexthash="3465891" _msthash="349">CalcUS 云</h2><a id="user-content-calcus-cloud" class="anchor" aria-label="永久链接： CalcUS Cloud" href="#calcus-cloud" _mstaria-label="448019" _msthash="350"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font _mstmutation="1" _msttexthash="2852733208" _msthash="351">我们正在开发一项云服务，让您无需任何配置即可访问 CalcUS。<a href="https://calcus.cloud" rel="nofollow" _mstmutation="1" _istranslated="1">这项服务 CalcUS Cloud</a> 将主要针对想要教授实用量子化学的教授。整个班级将能够遵循在线课程并运行真实、快如闪电的 xTB 计算。此服务目前处于 Alpha 阶段。如果您想提前访问该平台，请发送电子邮件至 。</font><code>contact@calcus.cloud</code></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto" _msttexthash="5773755" _msthash="352">安装</h2><a id="user-content-installation" class="anchor" aria-label="永久链接：安装" href="#installation" _mstaria-label="519259" _msthash="353"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto" _msttexthash="2069813200" _msthash="354">出于许可原因，<strong _istranslated="1">CalcUS 中不能包含任何需要用户许可证的软件包。</strong>为方便起见，我们包括 LGPL-v3 许可的 <a href="https://github.com/grimme-lab/xtb" _istranslated="1">xtb 软件包</a>以及 Grimme 集团的相关软件包（<a href="https://github.com/grimme-lab/crest" _istranslated="1">crest</a>、<a href="https://github.com/grimme-lab/stda" _istranslated="1">stda</a> 和 <a href="https://github.com/grimme-lab/xtb4stda" _istranslated="1">xtb4stda</a>）。默认情况下，这些在 CalcUS 中启用快速的半经验紧绑定计算。</p>
+<p dir="auto" _msttexthash="1566745362" _msthash="355">CalcUS 还包含开源波函数分析程序 <a href="http://sobereva.com/multiwfn/" rel="nofollow" _istranslated="1">Multiwfn</a> 的重新分发及其许可证。如果您使用 CalcUS 的分子轨道，请同时引用 Multiwfn：Tian Lu， Feiwu Chen， “Multiwfn： A Multifunctional Wavefunction Analyzer”， <em _istranslated="1">J. Comput. Chem.</em>， <strong _istranslated="1">2012</strong>， <em _istranslated="1">33</em>， 580-592.DOI： <a href="https://doi.org/10.1002/jcc.22885" rel="nofollow" _istranslated="1">10.1002/jcc.22885</a></p>
+<p dir="auto" _msttexthash="432029390" _msthash="356">要使用其他软件包，您需要在本地安装软件包的 Linux 版本，或者在远程集群上使用这些软件包。</p>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto" _msttexthash="3489512" _msthash="357">Linux 和 Mac</h3><a id="user-content-linux-and-mac" class="anchor" aria-label="永久链接：Linux 和 Mac" href="#linux-and-mac" _mstaria-label="462813" _msthash="358"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto" _msttexthash="519539098" _msthash="359">首先，安装并配置 <a href="https://docs.docker.com/engine/install/" rel="nofollow" _istranslated="1">Docker Engine</a> 和 <a href="https://docs.docker.com/compose/install/" rel="nofollow" _istranslated="1">Docker Compose</a>。在 Linux 上，必须创建一个 docker 组并将您自己添加到其中：</p>
+<pre>sudo groupadd docker
 sudo usermod -aG docker $USER
 newgrp docker
 </pre>
-
-Then, clone the repository. In that repository, a file named `.env` will be needed to set the necessary environment variables. The script `generate_env.py` can be used to interactively create that file. Simply run it with the command `python3 generate_env.py` and answer the questions.
-
-### Windows
-You will need to install [Docker](https://www.docker.com/). You might also need to install WSL2 when prompted by Docker. Note that Windows 7 (and older versions of Windows) are not supported.
-
-Further configuration of WSL2 is recommended, as it acquires a large amount of RAM by default (much more than necessary). To do so, go to your user profile home (accessible by entering `%USERPROFILE%` in the file explorer) and create a file called `.wslconfig`. This file has the following format:
-
-<pre>
-[wsl2]
+<p dir="auto"><font _mstmutation="1" _msttexthash="951380742" _msthash="360">然后，克隆存储库。在该存储库中，需要一个名为 的文件来设置必要的环境变量。该脚本可用于以交互方式创建该文件。只需使用命令运行它并回答问题。</font><code>.env</code><code>generate_env.py</code><code>python3 generate_env.py</code></p>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto" _msttexthash="5470725" _msthash="361">窗户</h3><a id="user-content-windows" class="anchor" aria-label="永久链接：Windows" href="#windows" _mstaria-label="342394" _msthash="362"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto" _msttexthash="559459875" _msthash="363">您需要安装 <a href="https://www.docker.com/" rel="nofollow" _istranslated="1">Docker</a>。当 Docker 提示时，您可能还需要安装 WSL2。请注意，不支持 Windows 7（和旧版本的 Windows）。</p>
+<p dir="auto"><font _mstmutation="1" _msttexthash="1676043291" _msthash="364">建议进一步配置 WSL2，因为它默认获取大量 RAM（远远超过必要）。为此，请转到您的用户配置文件主页（通过在文件资源管理器中输入来访问）并创建一个名为 的文件。此文件采用以下格式：</font><code>%USERPROFILE%</code><code>.wslconfig</code></p>
+<pre>[wsl2]
 memory=2GB
 processors=2
 </pre>
-
-You can of course tweak the parameters to your liking. It will be necessary to restart the Docker service to apply the change.
-
-Then, clone the repository. In that repository, a file named `.env` will be needed to set the necessary environment variables. The script `generate_env.py` can be used to interactively create that file. For convenience, you can simply execute `generate_env.bat` to call this script. You will need [Python](https://www.python.org/downloads/) to execute the script (any version of Python 3 will work). Simply answer the questions to create the environment file.
-
-## Running CalcUS
-Once the setup is complete, launch CalcUS using `start.sh` (Linux, Mac) or by executing `start.bat` (Windows). CalcUS is now available in your web browser at the address `localhost:8080`. On Mac, you might need to manually start the docker service if you've just installed it. It will start automatically at boot in the future.
-
-The first startup might take several minutes, as the different services used within CalcUS are being downloaded. The database must also be created and configured. Subsequent startups will be considerably faster. A superuser account will be created with the username specified in the `.env` file. You can use this account as main account, but make sure to change the password if the server is accessible to others.
-
-Also note that the `.env` *contains sensitive information* and should only be accessible by the server administrator.
-
-By default, the startup script will automatically update CalcUS from stable Docker images and remove unused images. If you use Docker other than for CalcUS or do not want this behaviour, you might want to modify the startup script. Moreover, if you would prefer building the Docker image instead of downloading it (500-600 MB), you can build the image and run CalcUS in development mode using `start_dev.sh` on Mac/Linux or `start_dev.bat` on Windows.
-
-Further documentation is available [here](https://calcus.readthedocs.io/).
-
-## Citation
-If you use CalcUS in your research, please cite it:
-
-> Raphaël Robidas and Claude Y. Legault, "CalcUS: An Open-Source Quantum Chemistry Web Platform", *J. Chem. Inf. Model.*, **2022**, *62* (5) 1147-1153. DOI: [10.1021/acs.jcim.1c01502](https://doi.org/10.1021/acs.jcim.1c01502)
-
-## Contributors
-**Project lead and main contributor**: Raphaël Robidas
-
-**Contributor to the conception and beta-testing**: Prof. Claude Y. Legault
-
-**Contributor of significant features**: 
-
-+ Divyam Agarwal (@div-yam): automated multi-step calculations (partially completed)
-
-**Contributors to the web frontend**: 
-
-+ Glen Forcha (@ForchaGlen)
-+ Dhairya Khanna (@Dhairya3124)
-+ Omkar (@Omkar0803)
-
-**Beta-testers**:
-
-+ Léo Hall
-+ Joanick Bourret
-+ David Lemire
-+ Tommy Lussier
-+ Louis Schutz
-
-## Dependencies
-CalcUS makes use of several third-party software. For convenience, all the non-Python packages are redistributed in this repository, along with their license and/or links to their homepage. These packages are however not part of CalcUS itself.
-
-## License
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program. If not, see https://www.gnu.org/licenses/.
-
-CalcUS - Quantum Chemistry Web Platform
-
-Copyright (C) 2022 Raphaël Robidas
-
+<p dir="auto" _msttexthash="277347720" _msthash="365">当然，您可以根据自己的喜好调整参数。需要重新启动 Docker 服务才能应用更改。</p>
+<p dir="auto"><font _mstmutation="1" _msttexthash="2533598353" _msthash="366">然后，克隆存储库。在该存储库中，需要一个名为 的文件来设置必要的环境变量。该脚本可用于以交互方式创建该文件。为方便起见，您只需执行调用此脚本即可。您将需要 <a href="https://www.python.org/downloads/" rel="nofollow" _mstmutation="1" _istranslated="1">Python</a> 来执行脚本（任何版本的 Python 3 都可以使用）。只需回答问题即可创建环境文件。</font><code>.env</code><code>generate_env.py</code><code>generate_env.bat</code></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto" _msttexthash="7059832" _msthash="367">运行 CalcUS</h2><a id="user-content-running-calcus" class="anchor" aria-label="永久链接：运行 CalcUS" href="#running-calcus" _mstaria-label="524810" _msthash="368"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font _mstmutation="1" _msttexthash="1928342949" _msthash="369">设置完成后，使用 （Linux， Mac） 或执行 （Windows） 启动 CalcUS。CalcUS 现在可在您的网络浏览器中访问，地址为 .在 Mac 上，如果您刚刚安装了 docker 服务，则可能需要手动启动 docker 服务。它将在将来启动时自动启动。</font><code>start.sh</code><code>start.bat</code><code>localhost:8080</code></p>
+<p dir="auto"><font _mstmutation="1" _msttexthash="2597279763" _msthash="370">第一次启动可能需要几分钟时间，因为正在下载 CalcUS 中使用的不同服务。还必须创建和配置数据库。随后的启动速度将大大加快。将使用文件中指定的用户名创建一个超级用户帐户。您可以将此帐户用作主帐户，但如果其他人可以访问服务器，请确保更改密码。</font><code>.env</code></p>
+<p dir="auto"><font _mstmutation="1" _msttexthash="207147655" _msthash="371">另请注意，其中包含<em _mstmutation="1" _istranslated="1">敏感信息</em>，并且只能由服务器管理员访问。</font><code>.env</code></p>
+<p dir="auto"><font _mstmutation="1" _msttexthash="3480480783" _msthash="372">默认情况下，启动脚本将从稳定的 Docker 镜像自动更新 CalcUS 并删除未使用的镜像。如果您使用的 Docker 不是用于 CalcUS，或者不希望出现这种行为，则可能需要修改启动脚本。此外，如果您更喜欢构建 Docker 镜像而不是下载它 （500-600 MB），您可以在 Mac/Linux 或 Windows 上使用构建镜像并在开发模式下运行 CalcUS。</font><code>start_dev.sh</code><code>start_dev.bat</code></p>
+<p dir="auto" _msttexthash="40387841" _msthash="373">更多文档可<a href="https://calcus.readthedocs.io/" rel="nofollow" _istranslated="1">在此处</a>获取。</p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto" _msttexthash="4918095" _msthash="374">引文</h2><a id="user-content-citation" class="anchor" aria-label="永久链接： 引文" href="#citation" _mstaria-label="369161" _msthash="375"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto" _msttexthash="110559579" _msthash="376">如果您在研究中使用 CalcUS，请引用它：</p>
+<blockquote>
+<p dir="auto" _msttexthash="621411128" _msthash="377">Raphaël Robidas 和 Claude Y. Legault，“CalcUS：开源量子化学网络平台”，<em _istranslated="1">J. Chem. Inf. Model.</em>，<strong _istranslated="1">2022,62</strong> （5） 1147-1153。 <em _istranslated="1"></em>DOI： <a href="https://doi.org/10.1021/acs.jcim.1c01502" rel="nofollow" _istranslated="1">10.1021/acs.jcim.1c01502</a></p>
+</blockquote>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto" _msttexthash="6354283" _msthash="378">贡献</h2><a id="user-content-contributors" class="anchor" aria-label="永久链接： 贡献者" href="#contributors" _mstaria-label="528866" _msthash="379"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto" _msttexthash="67905669" _msthash="380"><strong _istranslated="1">项目负责人和主要贡献者</strong>：Raphaël Robidas</p>
+<p dir="auto" _msttexthash="90834536" _msthash="381"><strong _istranslated="1">构思和 beta 测试的贡献者</strong>：Claude Y. Legault 教授</p>
+<p dir="auto" _msttexthash="47482110" _msthash="382"><strong _istranslated="1">重要功能的贡献者</strong>：</p>
+<ul dir="auto">
+<li _msttexthash="286303368" _msthash="383">Divyam Agarwal （@div-yam）：自动多步骤计算（部分完成）</li>
+</ul>
+<p dir="auto" _msttexthash="43448886" _msthash="384"><strong _istranslated="1">Web 前端的贡献者</strong>：</p>
+<ul dir="auto">
+<li _msttexthash="40726790" _msthash="385">格伦福查 （@ForchaGlen）</li>
+<li _msttexthash="45534385" _msthash="386">Dhairya Khanna （@Dhairya3124）</li>
+<li _msttexthash="38204101" _msthash="387">奥姆卡尔 （@Omkar0803）</li>
+</ul>
+<p dir="auto" _msttexthash="29698461" _msthash="388"><strong _istranslated="1">Beta 测试人员</strong>：</p>
+<ul dir="auto">
+<li _msttexthash="13867100" _msthash="389">莱奥·霍尔</li>
+<li _msttexthash="25375272" _msthash="390">乔安尼克·布雷特</li>
+<li _msttexthash="15308553" _msthash="391">大卫·勒米尔</li>
+<li _msttexthash="17345484" _msthash="392">汤米·卢西尔</li>
+<li _msttexthash="19092996" _msthash="393">路易斯·舒茨</li>
+</ul>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto" _msttexthash="5617599" _msthash="394">依赖</h2><a id="user-content-dependencies" class="anchor" aria-label="永久链接：依赖项" href="#dependencies" _mstaria-label="507416" _msthash="395"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto" _msttexthash="1299955774" _msthash="396">CalcUS 使用多个第三方软件。为方便起见，所有非 Python 包都在此存储库中重新分发，以及它们的许可证和/或指向其主页的链接。然而，这些软件包并不是 CalcUS 本身的一部分。</p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto" _msttexthash="9675445" _msthash="397">许可证</h2><a id="user-content-license" class="anchor" aria-label="永久链接：许可证" href="#license" _mstaria-label="331903" _msthash="398"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto" _msttexthash="1115501400" _msthash="399">本程序是自由软件：您可以重新分发和/或修改它
+它根据 GNU 通用公共许可证的条款发布
+Free Software Foundation，许可证的第 3 版，或
+（由您选择）任何更高版本。</p>
+<p dir="auto" _msttexthash="687794835" _msthash="400">分发这个程序是希望它有用，
+但没有任何保证;甚至没有
+适销性或特定用途的适用性。请参阅
+GNU 通用公共许可证了解更多详情。</p>
+<p dir="auto" _msttexthash="322876671" _msthash="401">您应该已经收到了 GNU 通用公共许可证的副本
+以及这个程序。如果没有，请参阅 <a href="https://www.gnu.org/licenses/" rel="nofollow" _istranslated="1">https://www.gnu.org/licenses/</a>。</p>
+<p dir="auto" _msttexthash="48822449" _msthash="402">CalcUS - 量子化学网络平台</p>
+<p dir="auto" _msttexthash="32694740" _msthash="403">版权所有 （C） 2022 Raphaël Robidas</p>
+</article></div>
